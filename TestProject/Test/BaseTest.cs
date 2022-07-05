@@ -18,6 +18,7 @@ namespace TestProject
             var outPutDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             driver = new ChromeDriver(outPutDirectory);
             driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+            Thread.Sleep(2000);
 
             homePage = new HomePage(driver);
         }
